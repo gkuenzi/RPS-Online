@@ -14,23 +14,15 @@ function Gameplay() {
                         username='steve'
                     ></Profile>
                     <div className='selectionDisplay'>Choice</div>
-                    <div className='options'>
-                        <button>R</button>
-                        <button>P</button>
-                        <button>S</button>
-                    </div>
                 </div>
                 <div className='rightContainer'>
-                    <Profile
-                        image=''
-                        username=''
-                    ></Profile>
-                    <div className='selectionDisplay'>Choice</div>
-                    <div className='options'>
-                        <button>R</button>
-                        <button>P</button>
-                        <button>S</button>
+                    <div className='rightProfile'>
+                        <Profile
+                            image=''
+                            username=''
+                        ></Profile>
                     </div>
+                    <div className='selectionDisplay'>Choice</div>
                 </div>
             </div>
         </div>
