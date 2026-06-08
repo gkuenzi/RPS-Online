@@ -1,0 +1,16 @@
+
+.main {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.pfp {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid black;
+    border-radius: 999px;
+}
+

@@ -1,0 +1,22 @@
+body {
+    background-image: './assets/background.png';
+}
+
+.gameContainer {
+    display: flex;
+    height: 80vh;
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.leftContainer {
+    border: 2px solid red;
+    width: 50%
+}
+
+.rightContainer {
+    border: 2px solid blue;
+    width: 50%
+}
