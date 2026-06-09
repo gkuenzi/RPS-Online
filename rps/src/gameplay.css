@@ -1,24 +1,28 @@
-body {
-    background-image: './assets/background.png';
+.title {
+    width: 25vw;
+    height: auto;
 }
 
 .gameContainer {
     display: flex;
     height: 80vh;
-    background-image: url('./assets/background.png');
+    background-image: url('./assets/red-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
 
 .leftContainer {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 50%;
     padding: 5px;
 }
 
 .rightContainer {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 50%;
     padding: 5px;
 }
@@ -32,7 +36,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(33, 118, 22);
+    /* background-color: rgb(33, 118, 22); */
     height: 90%
 }
 
+.userChoice {
+    width: 70%;
+}
+
+.choiceOverlay {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.overlayBtn {
+    background: linear-gradient(to bottom, #590404, #000000);
+    border: 1px solid rgba(217, 217, 217, 0.5);
+    box-shadow: 0 0 8px rgba(130, 11, 11, 0.8);
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 0;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.overlayBtn img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+}
+
+.overlayBtn:hover {
+  transform: scale(1.05);
+}
