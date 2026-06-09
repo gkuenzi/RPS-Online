@@ -3,13 +3,19 @@ import titleCard from "./assets/title-card.png"
 import rock from "./assets/rock-Photoroom.png";
 import scissors from "./assets/scissors-Photoroom.png";
 import paper from "./assets/paper-Photoroom.png";
+import nullStar from "./assets/black-star.png"
+import grayStar from "./assets/gray-star.png"
+import whiteStar from "./assets/white-star.png"
+import blueStar from "./assets/blue-star.png"
 
 import Profile from './components/profile.jsx'
+import LoadingDots from './components/LoadingDots.jsx'
 import './gameplay.css'
 
 
 function Gameplay() {
     const [userChoice, setUserChoice] = useState(paper)
+    const [time, setTime] = useState(15)
     
     return (
         <div>
@@ -32,7 +38,23 @@ function Gameplay() {
                         ></Profile>
                     </div>
                     <div className='selectionDisplay'>
-                        <img src={scissors} className='userPick'/>
+                        {/* <img src={scissors} className='userPick'/> */}
+                        <LoadingDots></LoadingDots>
+                    </div>
+                </div>
+                <div className='headOverlay'>
+                    <div className='stars'>
+                        <img src={grayStar} alt='first star'/>
+                        <img src={whiteStar} alt='second star'/>
+                        <img src={nullStar} alt='third star'/>
+                    </div>
+                    <div className='timer'>
+                        {time}
+                    </div>
+                    <div className='stars'>
+                        <img src={grayStar} alt='first star'/>
+                        <img src={whiteStar} alt='second star'/>
+                        <img src={blueStar} alt='third star'/>
                     </div>
                 </div>
                 <div className='choiceOverlay'>
@@ -47,8 +69,8 @@ function Gameplay() {
                         <img src={scissors} alt="scissors"/>
                     </button>
                     </div>
-                    <div className='lockBtn'>
-                        <button>Lock In</button>
+                    <div className='lockContainer'>
+                        <button className='lockBtn'>Lock In</button>
                     </div>
                 </div>
             </div>

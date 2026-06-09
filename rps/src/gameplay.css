@@ -44,6 +44,37 @@
     width: 70%;
 }
 
+.headOverlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    /* horizontal */
+    gap: 9vw;
+    align-items: center;
+}
+
+.timer {
+    color: rgb(0, 0, 0);
+    text-shadow:
+        -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.stars img {
+    width: 50px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 .choiceOverlay {
     position: absolute;
     top: 82%;
@@ -55,7 +86,7 @@
 .overlayBtn {
     background: linear-gradient(to bottom, #590404, #000000);
     border: 1px solid rgba(217, 217, 217, 0.5);
-    box-shadow: 0 0 8px rgba(130, 11, 11, 0.8);
+    box-shadow: 0 0 12px rgba(188, 132, 132, 0.8);
     border-radius: 40px;
     overflow: hidden;
     padding: 0;
@@ -74,5 +105,26 @@
 }
 
 .overlayBtn:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.lockContainer {
+    position: absolute;
+    top: 109%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.lockBtn {
+    width: 6rem;
+    background: linear-gradient(to bottom, #590404, #000000);
+    border: 1px solid rgba(217, 217, 217, 0.5);
+    box-shadow: 0 0 12px rgba(188, 132, 132, 0.8);
+    border-radius: 3px;
+}
+
+.lockBtn:hover {
+    background: linear-gradient(to bottom, #542323, #000000);
+    cursor: pointer;
 }
