@@ -11,7 +11,6 @@ function Homescreen() {
     };
 
     const joinLobby = () => {
-        console.log("Joining:", lobbyInput);
         socket.emit("joinLobby", lobbyInput);
     };
 

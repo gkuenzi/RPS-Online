@@ -33,8 +33,14 @@ io.on("connection", (socket) => {
         });
 
         socket.on("joinLobby", (lobbyId) => {
+            console.log("Join request:", lobbyId);
 
-            if (!lobbies[lobbyId]) return;
+            if (!lobbies[lobbyId]) {
+                socket.emit("joinFailed", {
+                    message: "Lobby not found"
+                });
+                return;
+            }
 
             lobbies[lobbyId].players.push(socket.id);
 
@@ -46,7 +52,7 @@ io.on("connection", (socket) => {
             );
         });
 
-        
+
         console.log('create lobby recieved')
 
         const lobbyId =
