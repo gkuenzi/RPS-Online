@@ -13,7 +13,7 @@ import LoadingDots from './components/LoadingDots.jsx'
 import './gameplay.css'
 
 
-function Gameplay() {
+function Gameplay({lobbyCode}) {
     const [userChoice, setUserChoice] = useState(paper)
     const [time, setTime] = useState(15)
     
@@ -73,6 +73,7 @@ function Gameplay() {
                         <button className='lockBtn'>Lock In</button>
                     </div>
                 </div>
+                <div className='lobbyCode'>Lobby Code: {lobbyCode}</div>
             </div>
         </div>
     )

@@ -10,9 +10,9 @@ function LoadingDots() {
             <span></span>
             <span></span>
         </div>
-        <text style={{
+        <div style={{
             color: 'white',
-        }}>Waiting for Opponent</text>
+        }}>Waiting for Opponent</div>
         </div>
     );
 }

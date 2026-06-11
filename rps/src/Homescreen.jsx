@@ -1,13 +1,18 @@
 import { useState } from "react";
 import './Homescreen.css'
+import socket from "./socket";
 
 function Homescreen() {
 
-    return(
+const createLobby = () => {
+    socket.emit("createLobby");
+    console.log("Connected:", socket.connected);
+};
+
+    return (
         <div className='container'>
-            <h1>Hello World</h1>
-            <button>Online</button>
-            <button onClick={console.log('clicked')}>Play With Friend</button>
+            <h1>RPS Online</h1>
+            <button onClick={createLobby}>Create Lobby</button>
         </div>
     )
 }
