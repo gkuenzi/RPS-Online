@@ -31,7 +31,22 @@ io.on("connection", (socket) => {
                 // ...
             });
         });
-        // ===========
+
+        socket.on("joinLobby", (lobbyId) => {
+
+            if (!lobbies[lobbyId]) return;
+
+            lobbies[lobbyId].players.push(socket.id);
+
+            socket.join(lobbyId);
+
+            io.to(lobbyId).emit(
+                "playerCount",
+                lobbies[lobbyId].players.length
+            );
+        });
+
+        
         console.log('create lobby recieved')
 
         const lobbyId =

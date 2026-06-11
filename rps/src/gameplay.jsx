@@ -16,6 +16,7 @@ import './gameplay.css'
 function Gameplay({lobbyCode}) {
     const [userChoice, setUserChoice] = useState(paper)
     const [time, setTime] = useState(15)
+    const [playerCount, setPlayerCount] = useState(1)
     
     return (
         <div>
@@ -73,7 +74,7 @@ function Gameplay({lobbyCode}) {
                         <button className='lockBtn'>Lock In</button>
                     </div>
                 </div>
-                <div className='lobbyCode'>Lobby Code: {lobbyCode}</div>
+                <div className='lobbyCode'>({playerCount}/2 players) <b>Lobby Code: {lobbyCode}</b></div>
             </div>
         </div>
     )
